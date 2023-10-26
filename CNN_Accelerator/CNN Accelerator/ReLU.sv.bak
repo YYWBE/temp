@@ -1,0 +1,7 @@
+module ReLU #(parameter LENGTH = 16)(din, dout);
+	input [LENGTH-1:0] din;
+	output [LENGTH-1:0] dout;
+	
+	assign dout = din[LENGTH-1] ? din : 0;
+
+endmodule 

@@ -1,0 +1,34 @@
+module control #(parameter NUM_LAYERS=6)(clk, reset, start, next_layer, layer_active);
+	input clk, reset, start;
+	input next_layer;
+	output ready, done;
+	output [NUM_LAYERS-1:0] layer_active;
+
+
+	always_ff @(posedge clk) begin
+		if(reset) begin
+			
+		end else if(ready && start) begin
+			
+			
+		end else begin
+		
+			if(next_layer) begin
+				if(layer_active == NUM_LAYERS'd0) // first layer
+					layer_active <= NUM_LAYERS'd1;
+
+				else if(layer_active == 2**NUM_LAYERS) // last layer
+					done <= 1'b1;
+					
+				else
+					layer_active <= layer_active << 1'b1;
+			end
+			
+			if(
+			
+			
+		
+		end
+	
+	end
+endmodule 

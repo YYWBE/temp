@@ -1,0 +1,8 @@
+module pool_layer #(parameter DATA_WIDTH=16, KERNAL_SIZE=3)(data_in, restart, data_out, layerActive);
+		logic [DATA_WIDTH-1:0] weight_reg [KERNAL_SIZE*KERNAL_SIZE-1:0];
+		
+	
+	/*** ***/
+
+
+endmodule 
